@@ -1,2 +1,2 @@
 # ragwar
-Retrieval Augmented Generation for Warhammer Rules
+Retrieval Augmented Generation Chatbot for Warhammer40k Rules
