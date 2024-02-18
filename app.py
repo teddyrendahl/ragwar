@@ -53,6 +53,10 @@ def main():
 
     # Load our database if we haven't already
     if "db" not in st.session_state:
+        if not CHROMA_PATH.exists():
+            raise ValueError(
+                "Unable to find vector database. Try `python create_db.py`"
+            )
         st.session_state.db = Chroma(
             persist_directory=CHROMA_PATH.absolute().as_posix(),
             embedding_function=OpenAIEmbeddings(),
